@@ -9,9 +9,14 @@ app.use(express.urlencoded({extended: false}));
 
 // Load routes into variables
 const index = require('./routes/index');
+const users = require('./routes/users_route')
+const statistics = require('./routes/statistics')
 
 // Routes
 app.use('/', index);
+app.use('/users', users);
+app.use('/statistics', statistics);
 
 
 module.exports = app;
+
